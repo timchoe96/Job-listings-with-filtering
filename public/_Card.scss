@@ -1,0 +1,155 @@
+// ## Colors
+
+// ### Primary
+
+$desaturatedDarkCyan: hsl(180, 29%, 50%);
+
+// ### Neutral
+
+// background
+$lightGrayishCyan: hsl(180, 52%, 96%);
+// filter tablets
+$lightGrayishCyan: hsl(180, 31%, 95%);
+
+$darkGrayishCyan: hsl(180, 8%, 52%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+@mixin dateColor($background){
+    margin-right:10px;
+    background:$background;
+    color:white;
+    border-radius:20px;
+    font-size:10px;
+    height:22px;
+    font-weight:700;
+    padding:6px;
+}
+
+
+.cardList{
+    .side{
+        border-left:5px solid hsl(180, 29%, 50%);
+    }
+    font-family:'Spartan';
+    margin:40px 0 80px;
+    .Card{
+        &:hover{
+            transform:scale(1.02);
+        }
+        transition: all .2s ease-in-out;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background:white;
+        width:80%;
+        margin:0 auto 20px;
+        border-radius: 5px;
+        box-shadow:3px 3px 20px -5px hsl(180, 29%, 50%);
+        padding:25px 30px;
+       
+        .leftCard{
+            display:flex;
+            .imageNext{
+                white-space: nowrap;
+                display:flex;
+                flex-direction: column;
+                height:88px;
+                justify-content: space-between;
+                margin-left:20px;
+                h3{
+                    font-size:18px;
+                    &:hover{
+                        color:$desaturatedDarkCyan;
+                    }
+                }
+                .date{
+                    display:flex;
+                    align-items: center;
+                    h5{
+                        color:$desaturatedDarkCyan;
+                        margin-right:10px;
+                    }
+                    ._0{
+                        @include dateColor($desaturatedDarkCyan);
+                    }
+                    ._1{
+                       @include dateColor($veryDarkGrayishCyan);
+                    }
+                }
+                .details{
+                    display:flex;
+                   div{
+                       margin-right:10px;
+                       color:$darkGrayishCyan;
+                   }
+                }
+            }
+        }
+        img{
+            align-self: center;
+        }
+        .skills{
+            hr{
+                border-top:1px solid black;
+              
+            }
+            display:flex;
+            flex-wrap:wrap;
+            margin-left:20px;
+            div{
+                background:$lightGrayishCyan;
+                color:$desaturatedDarkCyan;
+                border-radius: 5px;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                height:30px;
+                padding:8px 10px;
+                font-weight: 700;
+                font-size:14px;
+                &:hover{
+                    color:white;
+                    background:$desaturatedDarkCyan;
+                }
+            }
+        }
+       
+    }
+}
+
+@media only screen and (max-width:768px){
+    .cardList{
+        .Card{
+            margin:0 auto 40px;
+            width:90%;
+            flex-wrap:wrap;
+            padding:50px 30px 25px;
+            .leftCard{
+                .imageNext{
+                    margin-left:0;
+                }
+                position:relative;
+            img{
+                position:absolute;
+                height:50px;
+                width:auto;
+                top:-70px;
+            }
+            }
+            .skills{
+                border-top:1px solid $darkGrayishCyan;
+                margin-left:0px;
+                margin-top:20px;
+                padding-top:20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .cardList{
+        margin: 100px 0 80px;
+    }
+}
+
+

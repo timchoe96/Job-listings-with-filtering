@@ -1,0 +1,67 @@
+// ## Colors
+
+// ### Primary
+
+$desaturatedDarkCyan: hsl(180, 29%, 50%);
+
+// ### Neutral
+
+// background
+$lightGrayishCyan: hsl(180, 52%, 96%);
+// filter tablets
+$lightGrayishCyan: hsl(180, 31%, 95%);
+
+$darkGrayishCyan: hsl(180, 8%, 52%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+
+.filter{
+    font-family:'Spartan';
+    box-shadow:3px 3px 20px -5px hsl(180, 29%, 50%);
+    width: 80%;
+    border-radius:5px;
+    margin:-30px auto 0;
+    background:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 30px;
+    .clear{
+        color:$desaturatedDarkCyan;
+        margin:10px 0;
+        font-weight:700;
+        font-size:12px;
+        cursor:default;
+        &:hover{
+            border-bottom:1px solid $desaturatedDarkCyan;
+        }
+    }
+    .filterObjects{
+        display:flex;
+        flex-wrap:wrap;
+        .remove{
+            background:$lightGrayishCyan;
+            display:flex;
+            align-items:center;
+            margin:20px 5px 20px;
+            img{
+                padding:5px;
+                align-self: center;
+                background:$desaturatedDarkCyan;
+                border-radius:0 5px 5px 0;
+                &:hover{
+                background:$veryDarkGrayishCyan;
+                }
+            }
+            .tiny{
+                color:$desaturatedDarkCyan;
+                font-size:12px;
+                font-weight:700;
+                border-radius:5px;
+                padding:2px 5px 0 7px;
+
+            }
+        }
+       
+    }
+}

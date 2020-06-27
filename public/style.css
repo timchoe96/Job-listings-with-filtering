@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #eef6f6;
+}
+
+body .image {
+  background: url("./background/bg-header-desktop.svg") no-repeat;
+  background-size: 100vw 160px;
+  background-color: #5ba4a4;
+  height: 160px;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 768px) {
+  body .image {
+    background: url("./background/bg-header-mobile.svg") no-repeat;
+    background-size: 100%;
+    height: 155px;
+    background-color: #5ba4a4;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body .image {
+    background: url("./background/bg-header-mobile.svg") no-repeat;
+    background-size: 100%;
+    height: 155px;
+    background-color: #5ba4a4;
+  }
+}
+
+.cardList {
+  font-family: 'Spartan';
+  margin: 40px 0 80px;
+}
+
+.cardList .side {
+  border-left: 5px solid #5ba4a4;
+}
+
+.cardList .Card {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  width: 80%;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 20px -5px #5ba4a4;
+          box-shadow: 3px 3px 20px -5px #5ba4a4;
+  padding: 25px 30px;
+}
+
+.cardList .Card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.cardList .Card .leftCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardList .Card .leftCard .imageNext {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 88px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+}
+
+.cardList .Card .leftCard .imageNext h3 {
+  font-size: 18px;
+}
+
+.cardList .Card .leftCard .imageNext h3:hover {
+  color: #5ba4a4;
+}
+
+.cardList .Card .leftCard .imageNext .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardList .Card .leftCard .imageNext .date h5 {
+  color: #5ba4a4;
+  margin-right: 10px;
+}
+
+.cardList .Card .leftCard .imageNext .date ._0 {
+  margin-right: 10px;
+  background: #5ba4a4;
+  color: white;
+  border-radius: 20px;
+  font-size: 10px;
+  height: 22px;
+  font-weight: 700;
+  padding: 6px;
+}
+
+.cardList .Card .leftCard .imageNext .date ._1 {
+  margin-right: 10px;
+  background: #2c3a3a;
+  color: white;
+  border-radius: 20px;
+  font-size: 10px;
+  height: 22px;
+  font-weight: 700;
+  padding: 6px;
+}
+
+.cardList .Card .leftCard .imageNext .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardList .Card .leftCard .imageNext .details div {
+  margin-right: 10px;
+  color: #7b8e8e;
+}
+
+.cardList .Card img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cardList .Card .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.cardList .Card .skills hr {
+  border-top: 1px solid black;
+}
+
+.cardList .Card .skills div {
+  background: #eef6f6;
+  color: #5ba4a4;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: 30px;
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cardList .Card .skills div:hover {
+  color: white;
+  background: #5ba4a4;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardList .Card {
+    margin: 0 auto 40px;
+    width: 90%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 50px 30px 25px;
+  }
+  .cardList .Card .leftCard {
+    position: relative;
+  }
+  .cardList .Card .leftCard .imageNext {
+    margin-left: 0;
+  }
+  .cardList .Card .leftCard img {
+    position: absolute;
+    height: 50px;
+    width: auto;
+    top: -70px;
+  }
+  .cardList .Card .skills {
+    border-top: 1px solid #7b8e8e;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .cardList {
+    margin: 100px 0 80px;
+  }
+}
+
+.filter {
+  font-family: 'Spartan';
+  -webkit-box-shadow: 3px 3px 20px -5px #5ba4a4;
+          box-shadow: 3px 3px 20px -5px #5ba4a4;
+  width: 80%;
+  border-radius: 5px;
+  margin: -30px auto 0;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px;
+}
+
+.filter .clear {
+  color: #5ba4a4;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: default;
+}
+
+.filter .clear:hover {
+  border-bottom: 1px solid #5ba4a4;
+}
+
+.filter .filterObjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter .filterObjects .remove {
+  background: #eef6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 5px 20px;
+}
+
+.filter .filterObjects .remove img {
+  padding: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #5ba4a4;
+  border-radius: 0 5px 5px 0;
+}
+
+.filter .filterObjects .remove img:hover {
+  background: #2c3a3a;
+}
+
+.filter .filterObjects .remove .tiny {
+  color: #5ba4a4;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 2px 5px 0 7px;
+}
+/*# sourceMappingURL=style.css.map */
